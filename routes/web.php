@@ -12,10 +12,28 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('authors', function () {
+    return view('authors');
+})->name('authors.index');
+
+Route::get('books', function () {
+    return view('books');
+})->name('books.index');
+
+Route::get('applicants', function () {
+    return view('applicants');
+})->name('applicants.index');
+
+Route::get('loans', function () {
+    return view('loans');
+})->name('loans.index');
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+
+
+
 
 Route::middleware([
     'auth:sanctum',
